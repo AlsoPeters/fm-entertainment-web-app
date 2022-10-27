@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-ewa-dark-blue font-outfit text-ewa-pure-white;
+}
