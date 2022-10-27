@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ewa: {
+        'ewa': {
           "pure-white": "#FFFFFF",
           red: "#FC4747",
           "dark-blue": "#10141E",
@@ -12,6 +12,9 @@ module.exports = {
           "semi-dark-blue": "#161D2F",
         },
       },
+      fontFamily: {
+        "outfit": ["Outfit", "sans-serif"],
+      }
     },
   },
   plugins: [],
