@@ -5,16 +5,28 @@ import { trpc } from "../utils/trpc";
 
 const Home: NextPage = () => {
   return (
-    <div className="px-6">
+    <div className="px-4">
       <SearchBar />
-      <h1 className="my-4">Trending</h1>
+      <h1 className="my-4 text-xl">Trending</h1>
       <div className="flex gap-4 overflow-scroll">
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+        <MovieCardLarge />
+        <MovieCardLarge />
+        <MovieCardLarge />
+        <MovieCardLarge />
       </div>
-      <h1 className="my-4">Recomended for you</h1>
+      <h1 className="my-4 text-xl">Recomended for you</h1>
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+        <MovieCardSmall />
+        <MovieCardSmall />
+        <MovieCardSmall />
+        <MovieCardSmall />
+        <MovieCardSmall />
+        <MovieCardSmall />
+        <MovieCardSmall />
+        <MovieCardSmall />
+        <MovieCardSmall />
+        <MovieCardSmall />
+      </div>
     </div>
   );
 };
@@ -34,9 +46,9 @@ const SearchBar = () => {
   );
 };
 
-const MovieCard = () => {
+const MovieCardLarge = () => {
   return (
-    <div className="flex h-[140px] min-w-[240px] flex-col justify-between rounded-xl bg-ewa-grayish-blue py-2 px-4">
+    <div className="flex h-[140px] min-w-[240px] flex-col justify-between rounded-xl bg-ewa-grayish-blue py-2 px-4 sm:h-[230px] sm:min-w-[470px]">
       <div className="h-[32px] w-[32px] place-self-end rounded-full bg-white"></div>
       <div>
         <div className="flex gap-2">
@@ -45,6 +57,24 @@ const MovieCard = () => {
           <p>Rating</p>
         </div>
         <p>Title</p>
+      </div>
+    </div>
+  );
+};
+
+const MovieCardSmall = () => {
+  return (
+    <div className="">
+      <div className="flex h-[110px] w-[164px] flex-col justify-between self-center rounded-xl bg-ewa-grayish-blue py-2 px-4 sm:h-[140px] sm:w-[220px] ">
+        <div className="h-[32px] w-[32px] place-self-end rounded-full bg-white"></div>
+      </div>
+      <div>
+        <div className="flex gap-2 ">
+          <p>Year</p>
+          <p>Type</p>
+          <p>Rating</p>
+        </div>
+        <p className="text-sm">Title</p>
       </div>
     </div>
   );
