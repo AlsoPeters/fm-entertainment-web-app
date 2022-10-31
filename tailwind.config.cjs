@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'ewa': {
+        ewa: {
           "pure-white": "#FFFFFF",
           red: "#FC4747",
           "dark-blue": "#10141E",
@@ -13,9 +13,10 @@ module.exports = {
         },
       },
       fontFamily: {
-        "outfit": ["Outfit", "sans-serif"],
-      }
+        outfit: ["Outfit", "sans-serif"],
+      },
     },
   },
-  plugins: [],
+  /* eslint @typescript-eslint/no-var-requires: "off" */
+  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
 };
