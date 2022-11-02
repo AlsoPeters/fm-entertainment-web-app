@@ -14,7 +14,7 @@ const Header = () => {
   );
 };
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="lg:flex">
       <Header />
@@ -24,3 +24,7 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
+
+interface LayoutProps {
+  children: React.ReactNode;
+}
