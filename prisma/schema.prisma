@@ -64,3 +64,17 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+// Start movie db 
+model Movie {
+  id               Int     @id @default(autoincrement())
+  title            String
+  thumbnail_small  String?
+  thumbnail_medium String?
+  thumbnail_large  String?
+  year             Int
+  category         String
+  rating           String
+  isBookmarked     Boolean
+  isTrending       Boolean
+}
